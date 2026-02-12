@@ -8,6 +8,9 @@ import TOML
 agama = pyimport("agama")
 SCRIPT_VERSION = "v0.1.2"
 
+const XI_DEFAULT=3
+const CUTOFF_DEFAULT=20
+
 
 function get_args()
     s = ArgParseSettings(
@@ -24,11 +27,11 @@ function get_args()
         "-t", "--cutoff"
             help="exponential cutoff radius in units of scale radius"
             arg_type=Float64
-            default=100
+            default=CUTOFF_DEFAULT
         "-x", "--xi"
             help="exponential cutoff strength"
             arg_type=Float64
-            default=1
+            default=XI_DEFAULT
         "-b", "--beta"
             help="Velocity anisotropy parameter"
             arg_type=Float64
@@ -51,10 +54,10 @@ function get_args()
         if args["r-a"] != Inf
             filename = filename * "_ra$(args["r-a"])"
         end
-        if args["cutoff"] != 100
+        if args["cutoff"] != CUTOFF_DEFAULT
             filename = filename * "_t$(args["cutoff"])"
         end
-        if args["xi"] != 1.
+        if args["xi"] != XI_DEFAULT
             filename = filename * "_xi$(args["xi"])"
         end
 
@@ -79,7 +82,7 @@ function main()
     args = get_args()
 
     if isfile(args["output"])
-        throw(ArgumentError("Output file already exists"))
+        throw(ArgumentError("Output file already exists: " * args["output"]))
     end
 
     @info "args = $args"

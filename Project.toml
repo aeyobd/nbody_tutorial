@@ -1,4 +1,6 @@
 [deps]
 Agama = "c9d1a974-9120-43da-b5b1-d69fd551855f"
+DensityEstimators = "6a64a12f-920b-4cea-9d97-f6c2170ce0ee"
 LilGuys = "1391d4f3-b950-46e7-ae93-86515cdc2b0b"
+PyFITS = "8bc99c6c-7bfa-45ed-8c8b-4447c0025491"
 PythonCall = "6099a3de-0909-46bc-b1f4-468b9a2dfc0d"
