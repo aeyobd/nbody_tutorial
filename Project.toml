@@ -1,0 +1,4 @@
+[deps]
+Agama = "c9d1a974-9120-43da-b5b1-d69fd551855f"
+LilGuys = "1391d4f3-b950-46e7-ae93-86515cdc2b0b"
+PythonCall = "6099a3de-0909-46bc-b1f4-468b9a2dfc0d"
