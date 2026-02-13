@@ -1,0 +1,9 @@
+v_scale = 0.9912007618703178
+M_scale = 0.5267343605366361
+r_scale = 0.5361278838172377
+
+[profile.TruncNFW]
+trunc = 20
+xi = 3
+v_circ_max = 0.1494
+r_circ_max = 3.2

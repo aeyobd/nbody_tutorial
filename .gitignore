@@ -2,7 +2,10 @@
 gadget/Gadget*
 gadget/build_*
 gadget/gadget4
+
 *.hdf5
+*.fits
+
 out
 *.log
-*.fits
+*.out
